@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 id="title">REGISTER</h1>
+<div id="form-outer">
+    <p id="description">
+        Silahkan Register
+      </p>
+  
+  <form id="survey-form" method="POST" action="/register" onsubmit="return validateForm()">
+    <div class="rowTab">
+      <div class="labels">
+        <label id="name-label" for="name">username </label>
+      </div>
+      <div class="rightTab">
+        <input autofocus type="text" name="i_username" id="username" class="input-field" placeholder="Enter your username" required>
+      </div>
+    </div>
+
+      <div class="rowTab">
+        <div class="labels">
+          <label id="name-label" for="name">password </label>
+        </div>
+        <div class="rightTab">
+          <input autofocus type="password" name="i_password" id="password" class="input-field" placeholder="Enter your Name" required>
+        </div>
+      </div>
+    
+    <button id="submit" type="submit">Register</button></a>
+    <a href="/login"><button id="reset" type="reset">Login</button></a>
+  </form>
+</div>
+{% endblock %}

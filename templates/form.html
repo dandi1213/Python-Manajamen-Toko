@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 id="title">Form Penjualan</h1>
+<div id="form-outer">
+  <p id="description">
+    Silahkan Pilih 
+  </p>
+  
+  <form id="survey-form" method="POST" action="/form_p" onsubmit="return validateForm()">
+    <button id="submit" type="submit">Produk</button>
+  </form>
+
+  <form id="survey-form" method="POST" action="/form_k" onsubmit="return validateForm()">
+    <button id="submit" type="submit">Kategori</button>
+  </form>
+
+  <form id="survey-form" method="POST" action="/form_s" onsubmit="return validateForm()">
+    <button id="submit" type="submit">Supplier</button>
+  </form>
+
+  <form id="survey-form" method="POST" action="/form_t" onsubmit="return validateForm()">
+    <button id="submit" type="submit">Transaksi</button>
+  </form>
+</div>
+{% endblock %}

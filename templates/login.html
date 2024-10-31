@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 id="title">Politeknik Manufaktur Bandung</h1>
+<div id="form-outer">
+  <p id="description">
+    <h1>Login</h1>
+  </p>
+
+<br>
+  <br>
+  
+  <form id="survey-form" method="POST" action="/login" onsubmit="return validateForm()">
+      <div class="rowTab">
+        <div class="labels">
+          <label id="name-label" for="name">Username </label>
+        </div>
+        <div class="rightTab">
+          <input autofocus type="text" name="i_username" id="nama" class="input-field" placeholder="Masukan Username" required>
+        </div>
+      </div>
+
+      <div class="rowTab">
+        <div class="labels">
+          <label id="name-label" for="name">Password </label>
+        </div>
+        <div class="rightTab">
+          <input autofocus type="password" name="i_password" id="nama" class="input-field" placeholder="Masukan Password" required>
+        </div>
+      </div>
+    
+    <button id="submit" type="submit">Login</button></a>
+  </form>
+  <a href="/register"><button id="reset" type="reset">Register</button></a>
+</div>
+{% endblock %}

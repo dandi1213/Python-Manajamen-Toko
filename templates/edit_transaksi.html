@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 id="title">Form Input Transaksi Produk</h1>
+<div id="form-outer">
+  <p id="description">
+    Silahkan Input Data Transaksi
+  </p>
+
+<br>
+  <a href="/list_transaksi" class="nav-link">Lihat Data Transaksi</a>
+  <br>
+  
+  <form id="survey-form" method="POST" action="{{ url_for('update_transaksi', id = transaksi._id) }}" onsubmit="return validateForm()">
+    
+      <div class="rowTab">
+      <div class="labels">
+        <label id="name-label" for="name">Tanggal Transaksi</label>
+      </div>
+      <div class="rightTab">
+        <input autofocus type="date" name="i_tanggal_transaksi" id="tanggal_transaksi" value="{{ transaksi.tanggal_transaksi}}" class="input-field" placeholder="" required>
+      </div>
+    </div>
+
+    <div class="rowTab">
+      <div class="labels">
+        <label for="address">Produk</label>
+      </div>
+      <div class="rightTab">
+        <input autofocus type="text" name="i_produk" id="produk"value="{{ transaksi.produk}}" class="input-field" placeholder="Masukan Produk" required>
+      </div>
+    </div>
+
+    <div class="rowTab">
+      <div class="labels">
+        <label id="name-label" for="name">Jumlah</label>
+      </div>
+      <div class="rightTab">
+        <input autofocus type="number" name="i_jumlah" id="jumlah"value="{{ transaksi.jumlah}}" class="input-field" placeholder="Masukan Jumlah" required>
+      </div>
+    </div>
+
+    <div class="rowTab">
+      <div class="labels">
+        <label id="name-label" for="name">Total Harga </label>
+      </div>
+      <div class="rightTab">
+        <input autofocus type="number" name="i_total_harga" id="total_harga"value="{{ transaksi.total_harga}}" class="input-field" placeholder="Masukan Total Harga" required>
+      </div>
+    </div>
+
+
+    <button id="submit" type="submit">Submit</button></a>
+    <button id="reset" type="reset">Reset</button>
+  </form>
+</div>
+{% endblock %}

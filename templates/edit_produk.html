@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 id="title">Form Input Data Produk</h1>
+<div id="form-outer">
+  <p id="description">
+    Silahkan Input Data Produk
+  </p>
+
+<br>
+  <a href="/list_produk" class="nav-link">Lihat Data Produk</a>
+  <br>
+  
+  <form id="survey-form" method="POST" action="{{ url_for('update_produk', id = produk._id) }}" onsubmit="return validateForm()">
+      <div class="rowTab">
+        <div class="labels">
+          <label id="name-label" for="name">Nama </label>
+        </div>
+        <div class="rightTab">
+          <input autofocus type="text" name="i_nama" id="nim" value="{{produk.nama}}" class="input-field" placeholder="Masukan Nama Produk" required>
+        </div>
+      </div>
+
+      <div class="rowTab">
+        <div class="labels">
+          <label id="name-label" for="name">Kategori</label>
+        </div>
+        <div class="rightTab">
+          <input autofocus type="text" name="i_kategori" id="nama" value="{{produk.kategori}}"class="input-field" placeholder="Masukan Kategori" required>
+        </div>
+      </div>
+    
+    <div class="rowTab">
+      <div class="labels">
+        <label for="address">Harga</label>
+      </div>
+      <div class="rightTab">
+        <input autofocus type="number" name="i_harga" id="nama" value="{{produk.harga}}"class="input-field" placeholder="Masukan Harga" required>
+      </div>
+    </div>
+
+    <div class="rowTab">
+      <div class="labels">
+        <label for="address">Stok</label>
+      </div>
+      <div class="rightTab">
+        <input autofocus type="text" name="i_stok" id="nama" value="{{produk.stok}}"class="input-field" placeholder="Masukan Stok" required>
+      </div>
+    </div>
+
+    <div class="rowTab">
+      <div class="labels">
+        <label for="address">Deskripsi</label>
+      </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="i_deskripsi" placeholder="Masukan Deskripsi...">{{produk.deskripsi}}</textarea>
+      </div>
+    </div>
+
+    <div class="rowTab">
+      <div class="labels">
+        <label for="address">Gambar</label>
+      </div>
+      <div class="rightTab">
+        <input autofocus type="file" name="i_gambar" id="nama"value="{{produk.gambar}}" class="input-field" placeholder="Masukan Gambar" required>
+      </div>
+    </div>
+
+    <button id="submit" type="submit">Submit</button></a>
+    <button id="reset" type="reset">Reset</button>
+  </form>
+</div>
+{% endblock %}

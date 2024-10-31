@@ -1,0 +1,7 @@
+MONGO_URI = "mongodb://localhost:27017/"
+DATABASE_NAME = "transaksi_penjualan_produk_db"
+PRODUK_COLLECTION = "collection_produk"
+SUPPLIER_COLLECTION = "collection_supplier"
+KATEGORI_COLLECTION = "collection_kategori"
+TRANSAKSI_COLLECTION = "collection_transaksi"
+USER_COLLECTION = "user"
